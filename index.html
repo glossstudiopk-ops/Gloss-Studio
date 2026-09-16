@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gloss Studio | Luxury Aesthetic, Hair & Spa Sanctuary</title>
+  <meta name="description" content="Gloss Studio is a premier luxury beauty, hair styling, and spa sanctuary. Experience bespoke skincare, high-end hair transformations, and holistic wellness treatments.">
+  <meta name="keywords" content="Gloss Studio, luxury salon, aesthetic treatments, hair styling, spa, hydrafacial, balayage, facial, massage">
+  <meta property="og:title" content="Gloss Studio | Luxury Aesthetic, Hair & Spa Sanctuary">
+  <meta property="og:description" content="Elevate Your Glow at Gloss Studio. Bespoke beauty, luxury hair styling, and serene spa rituals in a minimalist warm off-white haven.">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: {
+              DEFAULT: '#F9F3EB',
+              card: '#FFFFFF',
+              dark: '#F3EAE0',
+              glass: 'rgba(249, 243, 235, 0.94)'
+            },
+            gold: {
+              primary: '#A57448',
+              light: '#C49265',
+              amber: '#D69E6E',
+              dark: '#825833'
+            },
+            espresso: {
+              DEFAULT: '#3D2B1D',
+              dark: '#231911'
+            }
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Playfair Display', 'serif'],
+            sans: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-cream text-espresso selection:bg-gold-primary selection:text-white">
+
+  <!-- HEADER / NAVIGATION -->
+  <header id="main-header" class="fixed top-0 left-0 w-full z-40 transition-all duration-300 glass-header">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 py-2.5 flex items-center justify-between">
+      
+      <!-- Single Provided Logo Only (No Duplicate HTML Text) -->
+      <a href="#" class="inline-flex items-center group">
+        <img src="assets/images/logo.jpg" alt="Gloss Studio Logo" class="h-14 sm:h-16 w-auto object-contain rounded-md shadow-xs transition-transform duration-300 group-hover:scale-105">
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-8 text-xs font-semibold uppercase tracking-[0.2em] text-espresso/80">
+        <a href="#home" class="nav-link-item hover:text-gold-primary transition-colors">Home</a>
+        <a href="#services" class="nav-link-item hover:text-gold-primary transition-colors">Services</a>
+        <a href="#menu" class="nav-link-item hover:text-gold-primary transition-colors">Treatment Menu</a>
+        <a href="#about" class="nav-link-item hover:text-gold-primary transition-colors">Philosophy</a>
+        <a href="#gallery" class="nav-link-item hover:text-gold-primary transition-colors">Gallery</a>
+        <a href="#reviews" class="nav-link-item hover:text-gold-primary transition-colors">Reviews</a>
+        <a href="#contact" class="nav-link-item hover:text-gold-primary transition-colors">Contact</a>
+      </nav>
+
+      <!-- CTA Button & Mobile Menu Toggle -->
+      <div class="flex items-center gap-4">
+        <a href="#reserve" class="open-booking-btn hidden sm:inline-flex items-center justify-center px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.2em] btn-gold-solid rounded-full">
+          Book Appointment
+        </a>
+
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-espresso hover:text-gold-primary focus:outline-none" aria-label="Toggle Navigation Menu">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-cream/95 backdrop-blur-xl transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col justify-between p-8 lg:hidden">
+    <div class="flex items-center justify-between border-b border-gold-primary/20 pb-6">
+      <img src="assets/images/logo.jpg" alt="Gloss Studio Logo" class="h-14 w-auto object-contain rounded">
+      <button id="close-mobile-menu" class="p-2 text-espresso hover:text-gold-primary text-2xl" aria-label="Close Mobile Menu">✕</button>
+    </div>
+
+    <nav class="flex flex-col gap-5 font-serif text-2xl text-espresso my-auto">
+      <a href="#home" class="mobile-nav-link hover:text-gold-primary transition-colors">01. Home</a>
+      <a href="#services" class="mobile-nav-link hover:text-gold-primary transition-colors">02. Services</a>
+      <a href="#menu" class="mobile-nav-link hover:text-gold-primary transition-colors">03. Treatment Menu</a>
+      <a href="#about" class="mobile-nav-link hover:text-gold-primary transition-colors">04. Our Philosophy</a>
+      <a href="#gallery" class="mobile-nav-link hover:text-gold-primary transition-colors">05. Visual Gallery</a>
+      <a href="#reviews" class="mobile-nav-link hover:text-gold-primary transition-colors">06. Client Reviews</a>
+      <a href="#reserve" class="mobile-nav-link hover:text-gold-primary transition-colors">07. Reserve Experience</a>
+      <a href="#contact" class="mobile-nav-link hover:text-gold-primary transition-colors">08. Location & Hours</a>
+    </nav>
+
+    <div class="pt-6 border-t border-gold-primary/20 flex flex-col gap-4">
+      <button class="open-booking-btn w-full py-3.5 text-center text-xs uppercase tracking-[0.2em] font-semibold btn-gold-solid rounded-full">
+        Book an Appointment
+      </button>
+      <p class="text-xs text-center text-espresso/70 tracking-wider font-medium">CONCIERGE: +1 (800) 555-GLOSS</p>
+    </div>
+  </div>
+
+
+  <!-- HERO SECTION WITH HIGH-CONTRAST LEGIBILITY FIX -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center pt-28 pb-20 overflow-hidden">
+    <!-- Hero Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img src="assets/images/hero_salon.jpg" alt="Gloss Studio Luxury Interior" class="w-full h-full object-cover object-center scale-105 transition-transform duration-1000">
+      <div class="absolute inset-0 hero-overlay-dark"></div>
+    </div>
+
+    <!-- Hero Content Glass Box -->
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center reveal">
+      
+      <div class="hero-glass-box p-8 sm:p-12 md:p-14 rounded-3xl">
+        
+        <!-- Attached Single Logo Display Badge -->
+        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-gold-primary/30 bg-white/90 backdrop-blur-md mb-8 pulse-badge shadow-sm">
+          <img src="assets/images/logo.jpg" alt="Gloss Studio Emblem" class="h-10 w-auto object-contain rounded">
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="font-serif text-5xl sm:text-7xl lg:text-8xl font-normal leading-[1.05] tracking-tight mb-6 text-espresso drop-shadow-sm">
+          Elevate Your <span class="italic gold-gradient-text font-serif">Glow.</span>
+        </h1>
+
+        <!-- High-Contrast Subtitle -->
+        <p class="max-w-2xl mx-auto text-base sm:text-lg text-espresso/90 font-light tracking-wide leading-relaxed mb-10">
+          Step into a sanctuary of tranquil luxury. Where advanced aesthetic science meets master hair artistry and holistic spa rituals tailored uniquely to you.
+        </p>
+
+        <!-- Action CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+          <button class="open-booking-btn w-full sm:w-auto px-9 py-4 text-xs font-semibold uppercase tracking-[0.25em] btn-gold-solid rounded-full shadow-lg">
+            Book an Appointment
+          </button>
+          <a href="#menu" class="w-full sm:w-auto px-9 py-4 text-xs font-semibold uppercase tracking-[0.25em] btn-gold-outline rounded-full bg-white/80">
+            Explore Treatment Menu
+          </a>
+        </div>
+
+        <!-- Feature Badges Strip -->
+        <div class="mt-12 pt-8 border-t border-gold-primary/20 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div>
+            <div class="text-gold-primary font-serif text-2xl font-semibold">5-Star</div>
+            <div class="text-[11px] uppercase tracking-[0.18em] text-espresso/80 font-medium mt-1">Client Excellence</div>
+          </div>
+          <div>
+            <div class="text-gold-primary font-serif text-2xl font-semibold">100%</div>
+            <div class="text-[11px] uppercase tracking-[0.18em] text-espresso/80 font-medium mt-1">Organic Botanicals</div>
+          </div>
+          <div>
+            <div class="text-gold-primary font-serif text-2xl font-semibold">Bespoke</div>
+            <div class="text-[11px] uppercase tracking-[0.18em] text-espresso/80 font-medium mt-1">Personalized Care</div>
+          </div>
+          <div>
+            <div class="text-gold-primary font-serif text-2xl font-semibold">Private</div>
+            <div class="text-[11px] uppercase tracking-[0.18em] text-espresso/80 font-medium mt-1">Luxury Spa Suites</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Scroll Down Indicator -->
+    <a href="#services" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-espresso/70 hover:text-gold-primary transition-colors">
+      <span class="text-[10px] uppercase tracking-[0.3em] font-semibold">Scroll</span>
+      <div class="w-4 h-7 border border-gold-primary/50 rounded-full flex justify-center p-1 bg-white/60">
+        <div class="w-1 h-2 bg-gold-primary rounded-full animate-bounce"></div>
+      </div>
+    </a>
+  </section>
+
+
+  <!-- SERVICES OVERVIEW SECTION -->
+  <section id="services" class="py-24 md:py-32 px-6 md:px-12 max-w-7xl mx-auto">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+      <span class="text-xs uppercase tracking-[0.3em] text-gold-primary font-semibold">OUR SPECIALIZATIONS</span>
+      <h2 class="font-serif text-4xl sm:text-6xl font-normal text-espresso mt-3 mb-6">
+        Curated Services of <span class="italic font-serif gold-gradient-text">Refinement</span>
+      </h2>
+      <div class="w-16 h-[2px] bg-gold-primary mx-auto mb-6"></div>
+      <p class="text-espresso/80 font-light text-base leading-relaxed tracking-wide">
+        Every treatment at Gloss Studio is a harmonious blend of innovative clinical aesthetic practices, artistic styling, and deep sensory relaxation.
+      </p>
+    </div>
+
+    <!-- 3-Column Minimalist Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- Card 1: Aesthetic Treatments -->
+      <div class="luxury-card rounded-2xl overflow-hidden flex flex-col justify-between reveal reveal-delay-1 group">
+        <div>
+          <div class="relative h-72 zoom-img-container">
+            <img src="assets/images/service_aesthetic.jpg" alt="Aesthetic Treatments at Gloss Studio" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-espresso/20 group-hover:bg-espresso/10 transition-colors"></div>
+            <span class="absolute top-4 right-4 bg-white/95 backdrop-blur-md text-gold-dark text-[10px] font-bold uppercase tracking-[0.2em] px-3.5 py-1.5 rounded-full border border-gold-primary/30 shadow-sm">
+              Clinical & Radiance
+            </span>
+          </div>
+          <div class="p-8">
+            <h3 class="font-serif text-2xl md:text-3xl text-espresso mb-3 group-hover:text-gold-primary transition-colors">
+              Aesthetic Treatments
+            </h3>
+            <p class="text-espresso/70 text-sm font-light leading-relaxed mb-6">
+              Advanced non-invasive facial rejuvenation, hydra-dermabrasion, 24K gold infusions, LED collagen therapies, and bespoke skin transformation plans.
+            </p>
+            <ul class="space-y-2.5 text-xs text-espresso/90 tracking-wider mb-6 font-medium">
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-gold-primary"></span> 24K Gold HydraFacial Glow
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-gold-primary"></span> Micro-needling & Stem Cell Therapy
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-gold-primary"></span> Non-Surgical Face Sculpting
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="px-8 pb-8 pt-0">
+          <button data-service="24K Gold HydraFacial Glow" data-price="$240" class="open-booking-btn w-full py-3.5 text-xs uppercase tracking-[0.2em] font-semibold btn-gold-outline rounded-full">
+            Book Aesthetic Care
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2: Hair Styling & Care -->
+      <div class="luxury-card rounded-2xl overflow-hidden flex flex-col justify-between reveal reveal-delay-2 group">
+        <div>
+          <div class="relative h-72 zoom-img-container">
+            <img src="assets/images/service_hair.jpg" alt="Hair Styling & Care at Gloss Studio" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-espresso/20 group-hover:bg-espresso/10 transition-colors"></div>
+            <span class="absolute top-4 right-4 bg-white/95 backdrop-blur-md text-gold-dark text-[10px] font-bold uppercase tracking-[0.2em] px-3.5 py-1.5 rounded-full border border-gold-primary/30 shadow-sm">
+              Artistry & Cut
+            </span>
+          </div>
+          <div class="p-8">
+            <h3 class="font-serif text-2xl md:text-3xl text-espresso mb-3 group-hover:text-gold-primary transition-colors">
+              Hair Styling & Care
+            </h3>
+            <p class="text-espresso/70 text-sm font-light leading-relaxed mb-6">
+              Master colorists crafting seamless sun-kissed balayage, precision couture haircuts, organic caviar hair rituals, and silk press smoothing.
+            </p>
+            <ul class="space-y-2.5 text-xs text-espresso/90 tracking-wider mb-6 font-medium">
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-gold-primary"></span> Custom French Balayage & Glossing
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-gold-primary"></span> Executive Couture Cut & Blowout
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-gold-primary"></span> Organic Caviar & Keratin Repair
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="px-8 pb-8 pt-0">
+          <button data-service="French Sun-Kissed Balayage" data-price="$280" class="open-booking-btn w-full py-3.5 text-xs uppercase tracking-[0.2em] font-semibold btn-gold-outline rounded-full">
+            Book Hair Styling
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3: Spa & Relaxation -->
+      <div class="luxury-card rounded-2xl overflow-hidden flex flex-col justify-between reveal reveal-delay-3 group">
+        <div>
+          <div class="relative h-72 zoom-img-container">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=1000" alt="Spa & Relaxation at Gloss Studio" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-espresso/20 group-hover:bg-espresso/10 transition-colors"></div>
+            <span class="absolute top-4 right-4 bg-white/95 backdrop-blur-md text-gold-dark text-[10px] font-bold uppercase tracking-[0.2em] px-3.5 py-1.5 rounded-full border border-gold-primary/30 shadow-sm">
+              Holistic Rejuvenation
+            </span>
+          </div>
+          <div class="p-8">
+            <h3 class="font-serif text-2xl md:text-3xl text-espresso mb-3 group-hover:text-gold-primary transition-colors">
+              Spa & Relaxation
+            </h3>
+            <p class="text-espresso/70 text-sm font-light leading-relaxed mb-6">
+              Escape to private acoustic suites. Warm basalt hot stone massage, botanical essential oil wraps, scalp reflexology, and serenity bath teas.
+            </p>
+            <ul class="space-y-2.5 text-xs text-espresso/90 tracking-wider mb-6 font-medium">
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-gold-primary"></span> Warm Basalt Stone Ritual
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-gold-primary"></span> Deep Tissue & Aromatherapy Massage
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-gold-primary"></span> Japanese Head Spa & Scalp Elixir
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="px-8 pb-8 pt-0">
+          <button data-service="Warm Basalt Stone Ritual" data-price="$210" class="open-booking-btn w-full py-3.5 text-xs uppercase tracking-[0.2em] font-semibold btn-gold-outline rounded-full">
+            Book Spa Sanctuary
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- LUXURY TREATMENT MENU & PRICING SECTION -->
+  <section id="menu" class="py-24 bg-cream-dark/60 border-y border-gold-primary/15 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+        <span class="text-xs uppercase tracking-[0.3em] text-gold-primary font-semibold">TRANSPARENT PRICING</span>
+        <h2 class="font-serif text-4xl sm:text-5xl font-normal text-espresso mt-2">
+          Atelier <span class="italic font-serif gold-gradient-text">Treatment Menu</span>
+        </h2>
+        <p class="text-espresso/75 text-sm font-light mt-3">Select a service category below to view our curated offerings and book directly.</p>
+      </div>
+
+      <!-- Category Selector Pills -->
+      <div class="flex flex-wrap items-center justify-center gap-3.5 mb-14 reveal">
+        <button class="menu-tab-btn active px-7 py-3 rounded-full text-xs font-semibold uppercase tracking-[0.2em] transition-all border border-gold-primary bg-gold-primary text-white shadow-md" data-category="aesthetics">
+          ✨ Aesthetics
+        </button>
+        <button class="menu-tab-btn px-7 py-3 rounded-full text-xs font-semibold uppercase tracking-[0.2em] transition-all border border-gold-primary/30 bg-white text-espresso hover:border-gold-primary" data-category="hair">
+          ✂️ Hair Styling
+        </button>
+        <button class="menu-tab-btn px-7 py-3 rounded-full text-xs font-semibold uppercase tracking-[0.2em] transition-all border border-gold-primary/30 bg-white text-espresso hover:border-gold-primary" data-category="spa">
+          🌿 Spa & Wellness
+        </button>
+        <button class="menu-tab-btn px-7 py-3 rounded-full text-xs font-semibold uppercase tracking-[0.2em] transition-all border border-gold-primary/30 bg-white text-espresso hover:border-gold-primary" data-category="lashes">
+          👁️ Lashes & Brows
+        </button>
+      </div>
+
+      <!-- Treatment Cards Container -->
+
+      <!-- 1. Aesthetics Category -->
+      <div id="menu-aesthetics" class="menu-category-content grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <div class="menu-item-card p-7 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-4 mb-2">
+              <span class="text-[10px] uppercase tracking-widest bg-gold-primary/10 text-gold-dark px-3 py-1 rounded-full font-semibold">75 Min Session</span>
+              <span class="font-serif text-3xl font-bold text-gold-primary">$240</span>
+            </div>
+            <h4 class="font-serif text-2xl font-semibold text-espresso mb-2">24K Gold HydraFacial Glow</h4>
+            <p class="text-xs text-espresso/75 font-light leading-relaxed mb-6">Deep pore vortex extraction, pure 24K gold foil infusion, and hyaluronic acid glow mask for luminous skin.</p>
+          </div>
+          <button data-service="24K Gold HydraFacial Glow" data-price="$240" class="open-booking-btn w-full py-3 text-xs uppercase tracking-[0.2em] font-semibold btn-gold-outline rounded-full">
+            Book 24K HydraFacial
+          </button>
+        </div>
+
+        <div class="menu-item-card p-7 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-4 mb-2">
+              <span class="text-[10px] uppercase tracking-widest bg-gold-primary/10 text-gold-dark px-3 py-1 rounded-full font-semibold">90 Min Session</span>
+              <span class="font-serif text-3xl font-bold text-gold-primary">$350</span>
+            </div>
+            <h4 class="font-serif text-2xl font-semibold text-espresso mb-2">Clinical Microneedling & PRP</h4>
+            <p class="text-xs text-espresso/75 font-light leading-relaxed mb-6">Stimulates deep collagen synthesis, refines skin texture, diminishes fine lines, and restores firmness.</p>
+          </div>
+          <button data-service="Clinical Microneedling & PRP" data-price="$350" class="open-booking-btn w-full py-3 text-xs uppercase tracking-[0.2em] font-semibold btn-gold-outline rounded-full">
+            Book Microneedling
+          </button>
+        </div>
+
+        <div class="menu-item-card p-7 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-4 mb-2">
+              <span class="text-[10px] uppercase tracking-widest bg-gold-primary/10 text-gold-dark px-3 py-1 rounded-full font-semibold">60 Min Session</span>
+              <span class="font-serif text-3xl font-bold text-gold-primary">$180</span>
+            </div>
+            <h4 class="font-serif text-2xl font-semibold text-espresso mb-2">LED Phototherapy & Enzyme Peel</h4>
+            <p class="text-xs text-espresso/75 font-light leading-relaxed mb-6">Gentle organic fruit enzyme exfoliation paired with medical-grade LED cell light stimulation.</p>
+          </div>
+          <button data-service="LED Phototherapy & Enzyme Peel" data-price="$180" class="open-booking-btn w-full py-3 text-xs uppercase tracking-[0.2em] font-semibold btn-gold-outline rounded-full">
+            Book LED Therapy
+          </button>
+        </div>
+
+        <div class="menu-item-card p-7 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-4 mb-2">
+              <span class="text-[10px] uppercase tracking-widest bg-gold-primary/10 text-gold-dark px-3 py-1 rounded-full font-semibold">60 Min Session</span>
+              <span class="font-serif text-3xl font-bold text-gold-primary">$210</span>
+            </div>
+            <h4 class="font-serif text-2xl font-semibold text-espresso mb-2">Bespoke Diamond Peel & Oxygen</h4>
+            <p class="text-xs text-espresso/75 font-light leading-relaxed mb-6">Hyperbaric oxygen dome infusion with diamond tip micro-resurfacing for instantly silky skin.</p>
+          </div>
+          <button data-service="Bespoke Diamond Peel & Oxygen" data-price="$210" class="open-booking-btn w-full py-3 text-xs uppercase tracking-[0.2em] font-semibold btn-gold-outline rounded-full">
+            Book Diamond Peel
+          </button>
+        </div>
+
+      </div>
+
+      <!-- 2. Hair Category -->
+      <div id="menu-hair" class="menu-category-content hidden grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <div class="menu-item-card p-7 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-4 mb-2">
+              <span class="text-[10px] uppercase tracking-widest bg-gold-primary/10 text-gold-dark px-3 py-1 rounded-full font-semibold">180 Min Session</span>
+              <span class="font-serif text-3xl font-bold text-gold-primary">$280</span>
+            </div>
+            <h4 class="font-serif text-2xl font-semibold text-espresso mb-2">French Sun-Kissed Balayage</h4>
+            <p class="text-xs text-espresso/75 font-light leading-relaxed mb-6">Hand-painted dimensional highlighting, customized gloss toner, scalp massage, and signature blowout finish.</p>
+          </div>
+          <button data-service="French Sun-Kissed Balayage" data-price="$280" class="open-booking-btn w-full py-3 text-xs uppercase tracking-[0.2em] font-semibold btn-gold-outline rounded-full">
+            Book Balayage
+          </button>
+        </div>
+
+        <div class="menu-item-card p-7 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-4 mb-2">
+              <span class="text-[10px] uppercase tracking-widest bg-gold-primary/10 text-gold-dark px-3 py-1 rounded-full font-semibold">60 Min Session</span>
+              <span class="font-serif text-3xl font-bold text-gold-primary">$130</span>
+            </div>
+            <h4 class="font-serif text-2xl font-semibold text-espresso mb-2">Master Couture Cut & Style</h4>
+            <p class="text-xs text-espresso/75 font-light leading-relaxed mb-6">Precision cutting tailored to face architecture, scalp reflexology massage, and luxury signature wave finish.</p>
+          </div>
+          <button data-service="Master Couture Cut & Style" data-price="$130" class="open-booking-btn w-full py-3 text-xs uppercase tracking-[0.2em] font-semibold btn-gold-outline rounded-full">
+            Book Haircut
+          </button>
+        </div>
+
+        <div class="menu-item-card p-7 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-4 mb-2">
+              <span class="text-[10px] uppercase tracking-widest bg-gold-primary/10 text-gold-dark px-3 py-1 rounded-full font-semibold">45 Min Session</span>
+              <span class="font-serif text-3xl font-bold text-gold-primary">$95</span>
+            </div>
+            <h4 class="font-serif text-2xl font-semibold text-espresso mb-2">Organic Caviar Deep Repair</h4>
+            <p class="text-xs text-espresso/75 font-light leading-relaxed mb-6">Intense protein rebuilding treatment for compromised hair with luxury steam infusion.</p>
+          </div>
+          <button data-service="Organic Caviar Deep Repair" data-price="$95" class="open-booking-btn w-full py-3 text-xs uppercase tracking-[0.2em] font-semibold btn-gold-outline rounded-full">
+            Book Caviar Repair
+          </button>
+        </div>
+
+        <div class="menu-item-card p-7 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-4 mb-2">
+              <span class="text-[10px] uppercase tracking-widest bg-gold-primary/10 text-gold-dark px-3 py-1 rounded-full font-semibold">150 Min Session</span>
+              <span class="font-serif text-3xl font-bold text-gold-primary">$320</span>
+            </div>
+            <h4 class="font-serif text-2xl font-semibold text-espresso mb-2">Keratin Smoothing Therapy</h4>
+            <p class="text-xs text-espresso/75 font-light leading-relaxed mb-6">Eliminates 95% frizz for up to 5 months while sealing mirror-like shine and hair vitality.</p>
+          </div>
+          <button data-service="Keratin Smoothing Therapy" data-price="$320" class="open-booking-btn w-full py-3 text-xs uppercase tracking-[0.2em] font-semibold btn-gold-outline rounded-full">
+            Book Keratin
+          </button>
+        </div>
+
+      </div>
+
+      <!-- 3. Spa Category -->
+      <div id="menu-spa" class="menu-category-content hidden grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <div class="menu-item-card p-7 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-4 mb-2">
+              <span class="text-[10px] uppercase tracking-widest bg-gold-primary/10 text-gold-dark px-3 py-1 rounded-full font-semibold">90 Min Session</span>
+              <span class="font-serif text-3xl font-bold text-gold-primary">$210</span>
+            </div>
+            <h4 class="font-serif text-2xl font-semibold text-espresso mb-2">Warm Basalt Stone Ritual</h4>
+            <p class="text-xs text-espresso/75 font-light leading-relaxed mb-6">Volcanic heated stone gliding combined with Swedish muscle relaxation techniques and aromatherapy oils.</p>
+          </div>
+          <button data-service="Warm Basalt Stone Ritual" data-price="$210" class="open-booking-btn w-full py-3 text-xs uppercase tracking-[0.2em] font-semibold btn-gold-outline rounded-full">
+            Book Stone Massage
+          </button>
+        </div>
+
+        <div class="menu-item-card p-7 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-4 mb-2">
+              <span class="text-[10px] uppercase tracking-widest bg-gold-primary/10 text-gold-dark px-3 py-1 rounded-full font-semibold">60 Min Session</span>
+              <span class="font-serif text-3xl font-bold text-gold-primary">$165</span>
+            </div>
+            <h4 class="font-serif text-2xl font-semibold text-espresso mb-2">Japanese Scalp & Head Spa</h4>
+            <p class="text-xs text-espresso/75 font-light leading-relaxed mb-6">Hydrotherapy scalp waterfall, acupressure neck release, and botanical oil bath soak.</p>
+          </div>
+          <button data-service="Japanese Scalp & Head Spa" data-price="$165" class="open-booking-btn w-full py-3 text-xs uppercase tracking-[0.2em] font-semibold btn-gold-outline rounded-full">
+            Book Head Spa
+          </button>
+        </div>
+
+      </div>
+
+      <!-- 4. Lashes Category -->
+      <div id="menu-lashes" class="menu-category-content hidden grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <div class="menu-item-card p-7 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-4 mb-2">
+              <span class="text-[10px] uppercase tracking-widest bg-gold-primary/10 text-gold-dark px-3 py-1 rounded-full font-semibold">120 Min Session</span>
+              <span class="font-serif text-3xl font-bold text-gold-primary">$195</span>
+            </div>
+            <h4 class="font-serif text-2xl font-semibold text-espresso mb-2">Cashmere Lash Extensions Set</h4>
+            <p class="text-xs text-espresso/75 font-light leading-relaxed mb-6">Weightless ultra-soft cashmere lash extensions applied with precision isolating technique.</p>
+          </div>
+          <button data-service="Cashmere Lash Extensions Set" data-price="$195" class="open-booking-btn w-full py-3 text-xs uppercase tracking-[0.2em] font-semibold btn-gold-outline rounded-full">
+            Book Cashmere Lashes
+          </button>
+        </div>
+
+        <div class="menu-item-card p-7 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-4 mb-2">
+              <span class="text-[10px] uppercase tracking-widest bg-gold-primary/10 text-gold-dark px-3 py-1 rounded-full font-semibold">60 Min Session</span>
+              <span class="font-serif text-3xl font-bold text-gold-primary">$110</span>
+            </div>
+            <h4 class="font-serif text-2xl font-semibold text-espresso mb-2">Keratin Lash Lift & Tint</h4>
+            <p class="text-xs text-espresso/75 font-light leading-relaxed mb-6">Natural lash enhancement lifting from the root with dark noir conditioning tint.</p>
+          </div>
+          <button data-service="Keratin Lash Lift & Tint" data-price="$110" class="open-booking-btn w-full py-3 text-xs uppercase tracking-[0.2em] font-semibold btn-gold-outline rounded-full">
+            Book Lash Lift
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ABOUT / PHILOSOPHY SECTION (SPLIT SCREEN) -->
+  <section id="about" class="py-24 md:py-32 px-6 md:px-12 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      
+      <!-- Left Side: Image with Single Logo Emblem -->
+      <div class="relative reveal">
+        <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-gold-primary/30">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1200" alt="Gloss Studio Philosophy & Sanctuary" class="w-full h-[520px] object-cover">
+        </div>
+        <!-- Decorative Background Frame -->
+        <div class="absolute -bottom-6 -right-6 w-full h-full border-2 border-gold-primary/40 rounded-2xl z-0 hidden sm:block"></div>
+        <div class="absolute top-6 left-6 z-20 bg-white/95 backdrop-blur-md p-6 rounded-2xl border border-gold-primary/30 max-w-xs shadow-xl flex items-center gap-4">
+          <img src="assets/images/logo.jpg" alt="Gloss Studio Logo" class="h-12 w-auto object-contain rounded">
+          <div>
+            <span class="font-serif text-2xl text-gold-primary font-bold">100% Organic</span>
+            <p class="text-[11px] text-espresso font-semibold uppercase tracking-wider mt-0.5">Cruelty-Free Botanical Formulations</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side: Philosophy Text -->
+      <div class="reveal reveal-delay-2">
+        <span class="text-xs uppercase tracking-[0.3em] text-gold-primary font-semibold">OUR PHILOSOPHY</span>
+        <h2 class="font-serif text-4xl sm:text-5xl font-normal text-espresso mt-2 mb-6 leading-tight">
+          Where Mindfulness Meets <span class="italic font-serif gold-gradient-text">High Artistry</span>
+        </h2>
+        <div class="w-16 h-[2px] bg-gold-primary mb-8"></div>
+        
+        <p class="text-espresso/80 font-light text-base leading-relaxed mb-6">
+          Founded on the principle that true beauty stems from a harmonious balance of inner tranquility and bespoke care, Gloss Studio was created as an antidote to routine salons.
+        </p>
+
+        <p class="text-espresso/75 font-light text-sm leading-relaxed mb-8">
+          Every detail of our warm off-white haven—from acoustic soundscapes and private treatment suites to our master aesthetic therapists—is curated to elevate your confidence and nourish your spirit.
+        </p>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-6 border-t border-gold-primary/20">
+          <div>
+            <div class="font-serif text-3xl font-bold text-gold-primary">12+</div>
+            <div class="text-[11px] uppercase tracking-wider text-espresso/80 font-semibold mt-1">Years Excellence</div>
+          </div>
+          <div>
+            <div class="font-serif text-3xl font-bold text-gold-primary">15k+</div>
+            <div class="text-[11px] uppercase tracking-wider text-espresso/80 font-semibold mt-1">Glowing Clients</div>
+          </div>
+          <div>
+            <div class="font-serif text-3xl font-bold text-gold-primary">4.9 / 5</div>
+            <div class="text-[11px] uppercase tracking-wider text-espresso/80 font-semibold mt-1">Satisfaction</div>
+          </div>
+        </div>
+
+        <div class="mt-10">
+          <a href="#reserve" class="inline-block px-8 py-3.5 text-xs uppercase tracking-[0.25em] font-semibold btn-gold-solid rounded-full">
+            Experience Gloss Studio
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- BEFORE & AFTER TRANSFORMATION SHOWCASE -->
+  <section class="py-20 bg-white border-y border-gold-primary/15 px-6 md:px-12">
+    <div class="max-w-5xl mx-auto">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+        <span class="text-xs uppercase tracking-[0.3em] text-gold-primary font-semibold">THE GLOSS DIFFERENCE</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-espresso mt-2">
+          Interactive Result <span class="italic font-serif gold-gradient-text">Showcase</span>
+        </h2>
+        <p class="text-xs text-espresso/70 mt-2">Drag the center handle horizontally to compare transformation results.</p>
+      </div>
+
+      <!-- Before / After Slider Box -->
+      <div id="ba-container" class="ba-container relative w-full h-[400px] sm:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-gold-primary/30 cursor-ew-resize reveal">
+        <!-- After Image (Background) -->
+        <img src="assets/images/service_hair.jpg" alt="After Gloss Studio Transformation" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute top-4 right-4 bg-espresso/90 text-white text-[10px] font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full backdrop-blur-sm z-10 border border-gold-primary/30">
+          AFTER (GLOSS GLOW)
+        </div>
+
+        <!-- Before Image (Overlay clipped) -->
+        <div id="ba-overlay" class="ba-overlay">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=1200" alt="Before Gloss Studio Transformation" class="w-full h-full object-cover max-w-none" style="width: 100%; height: 100%;">
+          <div class="absolute top-4 left-4 bg-cream/95 text-espresso text-[10px] font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full backdrop-blur-sm z-10 border border-gold-primary/30">
+            BEFORE
+          </div>
+        </div>
+
+        <!-- Handle Divider -->
+        <div id="ba-handle" class="absolute top-0 bottom-0 left-1/2 w-1 bg-white shadow-2xl z-20 flex items-center justify-center transform -translate-x-1/2">
+          <div class="w-10 h-10 rounded-full bg-gold-primary text-white border-2 border-white shadow-xl flex items-center justify-center text-sm">
+            ⇄
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- GALLERY SECTION (MASONRY GRID + LIGHTBOX) -->
+  <section id="gallery" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+    
+    <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+      <span class="text-xs uppercase tracking-[0.3em] text-gold-primary font-semibold">VISUAL PORTFOLIO</span>
+      <h2 class="font-serif text-4xl sm:text-5xl font-normal text-espresso mt-2">
+        The Gloss <span class="italic font-serif gold-gradient-text">Gallery</span>
+      </h2>
+      <p class="text-espresso/75 text-sm font-light mt-3">Explore our interior design, recent hair transformations, and tranquil spa suites.</p>
+    </div>
+
+    <!-- Gallery Category Filter Tabs -->
+    <div class="flex flex-wrap items-center justify-center gap-3.5 mb-12 reveal">
+      <button class="gallery-filter-btn active px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-[0.15em] transition-all bg-gold-primary text-white" data-filter="all">All</button>
+      <button class="gallery-filter-btn px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-[0.15em] transition-all bg-cream-dark text-espresso hover:bg-gold-primary/10" data-filter="hair">Hair</button>
+      <button class="gallery-filter-btn px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-[0.15em] transition-all bg-cream-dark text-espresso hover:bg-gold-primary/10" data-filter="aesthetics">Aesthetics</button>
+      <button class="gallery-filter-btn px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-[0.15em] transition-all bg-cream-dark text-espresso hover:bg-gold-primary/10" data-filter="spa">Spa</button>
+      <button class="gallery-filter-btn px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-[0.15em] transition-all bg-cream-dark text-espresso hover:bg-gold-primary/10" data-filter="interior">Interior</button>
+    </div>
+
+    <!-- Masonry Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Item 1: Hair -->
+      <div class="gallery-item zoom-img-container relative h-80 rounded-2xl overflow-hidden cursor-pointer group shadow-sm hover:shadow-xl transition-all reveal" data-category="hair" data-title="French Honey Balayage" data-category-text="Hair Styling">
+        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800" alt="Honey Balayage Hair Transformation" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-espresso/80 via-espresso/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+          <span class="text-[10px] uppercase tracking-widest text-gold-light font-semibold">Hair Styling</span>
+          <h4 class="font-serif text-xl text-white font-medium">French Honey Balayage</h4>
+        </div>
+      </div>
+
+      <!-- Item 2: Aesthetics -->
+      <div class="gallery-item zoom-img-container relative h-80 rounded-2xl overflow-hidden cursor-pointer group shadow-sm hover:shadow-xl transition-all reveal reveal-delay-1" data-category="aesthetics" data-title="24K Gold HydraFacial" data-category-text="Aesthetic Treatments">
+        <img src="assets/images/service_aesthetic.jpg" alt="24K Gold HydraFacial Session" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-espresso/80 via-espresso/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+          <span class="text-[10px] uppercase tracking-widest text-gold-light font-semibold">Aesthetic Treatments</span>
+          <h4 class="font-serif text-xl text-white font-medium">24K Gold HydraFacial</h4>
+        </div>
+      </div>
+
+      <!-- Item 3: Interior -->
+      <div class="gallery-item zoom-img-container relative h-80 rounded-2xl overflow-hidden cursor-pointer group shadow-sm hover:shadow-xl transition-all reveal reveal-delay-2" data-category="interior" data-title="Limestone Reception & Lounge" data-category-text="Studio Interior">
+        <img src="assets/images/hero_salon.jpg" alt="Gloss Studio Reception Lounge" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-espresso/80 via-espresso/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+          <span class="text-[10px] uppercase tracking-widest text-gold-light font-semibold">Studio Interior</span>
+          <h4 class="font-serif text-xl text-white font-medium">Limestone Reception Lounge</h4>
+        </div>
+      </div>
+
+      <!-- Item 4: Spa -->
+      <div class="gallery-item zoom-img-container relative h-80 rounded-2xl overflow-hidden cursor-pointer group shadow-sm hover:shadow-xl transition-all reveal" data-category="spa" data-title="Acoustic Stone Massage Suite" data-category-text="Spa & Relaxation">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=1000" alt="Hot Stone Therapy Spa Room" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-espresso/80 via-espresso/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+          <span class="text-[10px] uppercase tracking-widest text-gold-light font-semibold">Spa & Relaxation</span>
+          <h4 class="font-serif text-xl text-white font-medium">Acoustic Stone Massage Suite</h4>
+        </div>
+      </div>
+
+      <!-- Item 5: Hair 2 -->
+      <div class="gallery-item zoom-img-container relative h-80 rounded-2xl overflow-hidden cursor-pointer group shadow-sm hover:shadow-xl transition-all reveal reveal-delay-1" data-category="hair" data-title="Couture Wavy Blowout" data-category-text="Hair Styling">
+        <img src="assets/images/service_hair.jpg" alt="Couture Wavy Blowout Transformation" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-espresso/80 via-espresso/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+          <span class="text-[10px] uppercase tracking-widest text-gold-light font-semibold">Hair Styling</span>
+          <h4 class="font-serif text-xl text-white font-medium">Couture Wavy Blowout</h4>
+        </div>
+      </div>
+
+      <!-- Item 6: Aesthetics 2 -->
+      <div class="gallery-item zoom-img-container relative h-80 rounded-2xl overflow-hidden cursor-pointer group shadow-sm hover:shadow-xl transition-all reveal reveal-delay-2" data-category="aesthetics" data-title="Botanical Serum Glow" data-category-text="Aesthetics">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800" alt="Botanical Facial Treatment" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-espresso/80 via-espresso/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+          <span class="text-[10px] uppercase tracking-widest text-gold-light font-semibold">Aesthetics</span>
+          <h4 class="font-serif text-xl text-white font-medium">Botanical Serum Glow</h4>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- LIGHTBOX MODAL CONTAINER -->
+  <div id="lightbox-modal" class="lightbox-modal fixed inset-0 z-50 bg-espresso/90 backdrop-blur-xl flex items-center justify-center p-6">
+    <button id="lightbox-close" class="absolute top-6 right-6 text-white text-3xl hover:text-gold-light transition-colors z-10" aria-label="Close Lightbox">✕</button>
+    <button id="lightbox-prev" class="absolute left-6 text-white text-4xl hover:text-gold-light transition-colors z-10" aria-label="Previous Image">‹</button>
+    <button id="lightbox-next" class="absolute right-6 text-white text-4xl hover:text-gold-light transition-colors z-10" aria-label="Next Image">›</button>
+
+    <div class="max-w-4xl w-full flex flex-col items-center">
+      <div class="relative rounded-2xl overflow-hidden shadow-2xl max-h-[75vh]">
+        <img id="lightbox-img" src="" alt="Gloss Studio Lightbox Preview" class="w-full h-full object-contain">
+      </div>
+      <div class="mt-4 text-center">
+        <span id="lightbox-category" class="text-[10px] uppercase tracking-[0.3em] text-gold-light font-semibold">CATEGORY</span>
+        <h3 id="lightbox-title" class="font-serif text-2xl text-white mt-1">Image Title</h3>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- TESTIMONIALS SECTION (SMOOTH CAROUSEL) -->
+  <section id="reviews" class="py-24 bg-cream-dark/50 border-t border-gold-primary/15 px-6 md:px-12">
+    <div class="max-w-5xl mx-auto">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <span class="text-xs uppercase tracking-[0.3em] text-gold-primary font-semibold">CLIENT PRAISE</span>
+        <h2 class="font-serif text-4xl sm:text-5xl font-normal text-espresso mt-2">
+          Words from Our <span class="italic font-serif gold-gradient-text">Patrons</span>
+        </h2>
+        <div class="w-16 h-[2px] bg-gold-primary mx-auto mt-4"></div>
+      </div>
+
+      <!-- Testimonial Slider Outer -->
+      <div class="relative overflow-hidden reveal">
+        
+        <div id="testimonial-track" class="testimonial-track">
+          
+          <!-- Slide 1 -->
+          <div class="testimonial-slide w-full flex-shrink-0 px-4 sm:px-12">
+            <div class="bg-white rounded-2xl p-8 sm:p-12 border border-gold-primary/20 shadow-sm text-center">
+              <div class="flex items-center justify-center gap-1 text-gold-primary mb-6 text-lg">
+                ★★★★★
+              </div>
+              <p class="font-serif text-xl sm:text-2xl text-espresso italic leading-relaxed mb-8">
+                "Gloss Studio completely redefined my expectation of luxury beauty. The 24K Gold HydraFacial left my skin radiant for weeks before my wedding. The calm ambiance and attention to detail is unmatched."
+              </p>
+              <div class="flex items-center justify-center gap-4">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" alt="Victoria Sterling Client" class="w-12 h-12 rounded-full object-cover border-2 border-gold-primary">
+                <div class="text-left">
+                  <div class="font-semibold text-sm text-espresso">Victoria Sterling</div>
+                  <div class="text-[11px] text-gold-dark tracking-wider uppercase font-medium">Bespoke Skincare Patron</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="testimonial-slide w-full flex-shrink-0 px-4 sm:px-12">
+            <div class="bg-white rounded-2xl p-8 sm:p-12 border border-gold-primary/20 shadow-sm text-center">
+              <div class="flex items-center justify-center gap-1 text-gold-primary mb-6 text-lg">
+                ★★★★★
+              </div>
+              <p class="font-serif text-xl sm:text-2xl text-espresso italic leading-relaxed mb-8">
+                "Finding a master colorist who understands French balayage for fine hair is rare. Marcus at Gloss Studio created the softest, most natural dimensional blonde I've ever had. Truly exceptional."
+              </p>
+              <div class="flex items-center justify-center gap-4">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=200" alt="Sophia Laurent Client" class="w-12 h-12 rounded-full object-cover border-2 border-gold-primary">
+                <div class="text-left">
+                  <div class="font-semibold text-sm text-espresso">Sophia Laurent</div>
+                  <div class="text-[11px] text-gold-dark tracking-wider uppercase font-medium">Hair Artistry Patron</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="testimonial-slide w-full flex-shrink-0 px-4 sm:px-12">
+            <div class="bg-white rounded-2xl p-8 sm:p-12 border border-gold-primary/20 shadow-sm text-center">
+              <div class="flex items-center justify-center gap-1 text-gold-primary mb-6 text-lg">
+                ★★★★★
+              </div>
+              <p class="font-serif text-xl sm:text-2xl text-espresso italic leading-relaxed mb-8">
+                "The Hot Basalt Stone Ritual is an acoustic sensory journey. Floating in their private spa suite while receiving scalp reflexology melted away months of stress. Gloss Studio is my holy grail."
+              </p>
+              <div class="flex items-center justify-center gap-4">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" alt="Camilla Montgomery Client" class="w-12 h-12 rounded-full object-cover border-2 border-gold-primary">
+                <div class="text-left">
+                  <div class="font-semibold text-sm text-espresso">Camilla Montgomery</div>
+                  <div class="text-[11px] text-gold-dark tracking-wider uppercase font-medium">Spa Sanctuary Patron</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Slider Controls -->
+        <button id="testimonial-prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 w-10 h-10 rounded-full bg-cream/90 backdrop-blur-md border border-gold-primary/40 flex items-center justify-center text-espresso hover:bg-gold-primary hover:text-white transition-all shadow-md" aria-label="Previous Testimonial">‹</button>
+        <button id="testimonial-next" class="absolute top-1/2 right-0 transform -translate-y-1/2 w-10 h-10 rounded-full bg-cream/90 backdrop-blur-md border border-gold-primary/40 flex items-center justify-center text-espresso hover:bg-gold-primary hover:text-white transition-all shadow-md" aria-label="Next Testimonial">›</button>
+
+        <!-- Indicator Dots -->
+        <div id="testimonial-dots" class="flex items-center justify-center gap-2 mt-8"></div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- DEDICATED ON-PAGE APPOINTMENT RESERVATION SECTION -->
+  <section id="reserve" class="py-24 px-6 md:px-12 bg-espresso text-cream relative overflow-hidden">
+    <div class="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-gold-primary/15 blur-3xl"></div>
+    <div class="absolute -left-24 -top-24 w-96 h-96 rounded-full bg-gold-light/15 blur-3xl"></div>
+
+    <div class="max-w-4xl mx-auto relative z-10 reveal">
+      
+      <div class="text-center mb-12">
+        <img src="assets/images/logo.jpg" alt="Gloss Studio Emblem" class="h-16 w-auto object-contain rounded mx-auto mb-4">
+        <span class="text-xs uppercase tracking-[0.3em] text-gold-light font-semibold">ONLINE RESERVATION</span>
+        <h2 class="font-serif text-4xl sm:text-5xl font-normal text-white mt-2">
+          Book Your <span class="italic font-serif text-gold-light">Experience</span>
+        </h2>
+        <p class="text-cream/80 text-sm font-light max-w-lg mx-auto mt-2">
+          Complete your contact information and treatment preferences to secure your private session.
+        </p>
+      </div>
+
+      <!-- Direct Reservation Form Box -->
+      <form id="direct-booking-form" class="bg-white/95 text-espresso p-8 sm:p-12 rounded-3xl border border-gold-primary/40 shadow-2xl space-y-6">
+        
+        <h3 class="font-serif text-2xl font-semibold text-espresso border-b border-gold-primary/20 pb-4">
+          Client Information & Booking Details
+        </h3>
+
+        <!-- Contact Information Fields (Name, Email, Phone) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-espresso mb-2">Full Name *</label>
+            <input type="text" id="direct-name" required placeholder="e.g. Victoria Sterling" class="w-full p-3.5 rounded-xl border border-gold-primary/30 bg-cream/40 text-espresso text-sm focus:outline-none focus:border-gold-primary focus:bg-white transition-all">
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-espresso mb-2">Email Address *</label>
+            <input type="email" id="direct-email" required placeholder="e.g. victoria@example.com" class="w-full p-3.5 rounded-xl border border-gold-primary/30 bg-cream/40 text-espresso text-sm focus:outline-none focus:border-gold-primary focus:bg-white transition-all">
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-espresso mb-2">Phone Number *</label>
+            <input type="tel" id="direct-phone" required placeholder="e.g. +1 (555) 234-5678" class="w-full p-3.5 rounded-xl border border-gold-primary/30 bg-cream/40 text-espresso text-sm focus:outline-none focus:border-gold-primary focus:bg-white transition-all">
+          </div>
+        </div>
+
+        <!-- Treatment & Specialist Selection -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-espresso mb-2">Select Treatment</label>
+            <select id="direct-service" class="w-full p-3.5 rounded-xl border border-gold-primary/30 bg-cream/40 text-espresso text-sm focus:outline-none focus:border-gold-primary focus:bg-white transition-all">
+              <option value="24K Gold HydraFacial Glow ($240)">24K Gold HydraFacial Glow ($240)</option>
+              <option value="Clinical Microneedling & PRP ($350)">Clinical Microneedling & PRP ($350)</option>
+              <option value="French Sun-Kissed Balayage ($280)">French Sun-Kissed Balayage ($280)</option>
+              <option value="Master Couture Cut & Style ($130)">Master Couture Cut & Style ($130)</option>
+              <option value="Warm Basalt Stone Ritual ($210)">Warm Basalt Stone Ritual ($210)</option>
+              <option value="Japanese Scalp & Head Spa ($165)">Japanese Scalp & Head Spa ($165)</option>
+              <option value="Cashmere Lash Extensions ($195)">Cashmere Lash Extensions ($195)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-espresso mb-2">Preferred Date</label>
+            <input type="date" id="direct-date" required class="w-full p-3.5 rounded-xl border border-gold-primary/30 bg-cream/40 text-espresso text-sm focus:outline-none focus:border-gold-primary focus:bg-white transition-all">
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-espresso mb-2">Time Slot</label>
+            <select id="direct-time" class="w-full p-3.5 rounded-xl border border-gold-primary/30 bg-cream/40 text-espresso text-sm focus:outline-none focus:border-gold-primary focus:bg-white transition-all">
+              <option value="10:00 AM">10:00 AM</option>
+              <option value="11:30 AM">11:30 AM</option>
+              <option value="02:00 PM">02:00 PM</option>
+              <option value="04:30 PM">04:30 PM</option>
+              <option value="06:00 PM">06:00 PM</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-espresso mb-2">Special Requests or Notes (Optional)</label>
+          <textarea id="direct-notes" rows="3" placeholder="Specify skin sensitivities, hair history, or preferences..." class="w-full p-3.5 rounded-xl border border-gold-primary/30 bg-cream/40 text-espresso text-sm focus:outline-none focus:border-gold-primary focus:bg-white transition-all"></textarea>
+        </div>
+
+        <div class="pt-2 flex justify-end">
+          <button type="submit" class="w-full sm:w-auto px-10 py-4 text-xs font-semibold uppercase tracking-[0.25em] btn-gold-solid rounded-full text-white shadow-lg">
+            Confirm & Submit Reservation
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </section>
+
+
+  <!-- MULTI-STEP / QUICK MODAL -->
+  <div id="booking-modal" class="booking-modal fixed inset-0 z-50 bg-espresso/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6">
+    <div class="bg-white rounded-3xl border border-gold-primary/40 shadow-2xl max-w-2xl w-full overflow-hidden flex flex-col max-h-[90vh]">
+      
+      <!-- Modal Header -->
+      <div class="p-6 border-b border-gold-primary/20 flex items-center justify-between bg-cream">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/logo.jpg" alt="Gloss Studio Logo" class="h-10 w-auto object-contain rounded">
+        </div>
+        <button id="close-booking-modal" class="text-espresso/60 hover:text-espresso text-2xl p-1" aria-label="Close Booking Modal">✕</button>
+      </div>
+
+      <!-- Form Step -->
+      <div id="booking-form-step" class="p-6 sm:p-8 overflow-y-auto">
+        <form id="appointment-full-form" class="space-y-5">
+          
+          <div class="bg-gold-primary/5 p-4 rounded-xl border border-gold-primary/20 mb-4">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-gold-dark mb-1">Step 1: Your Contact Information</h4>
+            <p class="text-xs text-espresso/70">Please provide your details so our concierge can confirm your appointment.</p>
+          </div>
+
+          <!-- Contact Inputs -->
+          <div class="space-y-4">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-espresso mb-1">Full Name *</label>
+              <input type="text" id="booking-name" required placeholder="e.g. Victoria Sterling" class="w-full p-3 rounded-xl border border-gold-primary/30 bg-cream/30 text-espresso text-sm focus:outline-none focus:border-gold-primary">
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-espresso mb-1">Email Address *</label>
+                <input type="email" id="booking-email" required placeholder="e.g. victoria@example.com" class="w-full p-3 rounded-xl border border-gold-primary/30 bg-cream/30 text-espresso text-sm focus:outline-none focus:border-gold-primary">
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-espresso mb-1">Phone Number *</label>
+                <input type="tel" id="booking-phone" required placeholder="e.g. +1 (555) 000-0000" class="w-full p-3 rounded-xl border border-gold-primary/30 bg-cream/30 text-espresso text-sm focus:outline-none focus:border-gold-primary">
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gold-primary/5 p-4 rounded-xl border border-gold-primary/20 my-4">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-gold-dark mb-1">Step 2: Service & Date Preference</h4>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-espresso mb-1">Treatment</label>
+              <select id="booking-service" class="w-full p-3 rounded-xl border border-gold-primary/30 bg-cream/30 text-espresso text-sm focus:outline-none focus:border-gold-primary">
+                <option value="24K Gold HydraFacial Glow">24K Gold HydraFacial Glow ($240)</option>
+                <option value="Clinical Microneedling & PRP">Clinical Microneedling & PRP ($350)</option>
+                <option value="French Sun-Kissed Balayage">French Sun-Kissed Balayage ($280)</option>
+                <option value="Master Couture Cut & Style">Master Couture Cut & Style ($130)</option>
+                <option value="Warm Basalt Stone Ritual">Warm Basalt Stone Ritual ($210)</option>
+                <option value="Japanese Scalp & Head Spa">Japanese Scalp & Head Spa ($165)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-espresso mb-1">Preferred Date</label>
+              <input type="date" id="booking-modal-date" class="w-full p-3 rounded-xl border border-gold-primary/30 bg-cream/30 text-espresso text-sm focus:outline-none focus:border-gold-primary">
+            </div>
+          </div>
+
+          <div class="pt-4 flex justify-end">
+            <button type="submit" class="w-full py-3.5 text-xs font-semibold uppercase tracking-[0.25em] btn-gold-solid rounded-full text-white shadow-md">
+              Complete Appointment Booking
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Success Step -->
+      <div id="booking-success-step" class="p-8 text-center space-y-4 hidden">
+        <div class="w-16 h-16 rounded-full bg-gold-primary text-white flex items-center justify-center text-3xl mx-auto shadow-lg">✓</div>
+        <h4 class="font-serif text-3xl font-normal text-espresso">Appointment Reserved</h4>
+        <p class="text-sm text-espresso/80 max-w-md mx-auto leading-relaxed">
+          Thank you! We have logged your details. A confirmation email with prep recommendations will arrive in your inbox shortly.
+        </p>
+        <div class="inline-block p-4 rounded-xl bg-cream border border-gold-primary/30 font-mono text-sm text-gold-dark font-bold mt-2">
+          Reference Code: <span id="modal-confirmation-code">GS-849201</span>
+        </div>
+        <div class="pt-4">
+          <button onclick="document.getElementById('booking-modal').classList.remove('active'); document.body.style.overflow='';" class="px-8 py-3 text-xs uppercase tracking-[0.2em] font-semibold btn-gold-solid rounded-full">
+            Return to Website
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- FOOTER & CONTACT SECTION -->
+  <footer id="contact" class="bg-espresso-dark text-cream pt-20 pb-12 border-t border-gold-primary/20">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 pb-16 border-b border-gold-primary/15">
+        
+        <!-- Brand Info Column with Single Logo Image -->
+        <div class="space-y-4">
+          <img src="assets/images/logo.jpg" alt="Gloss Studio Logo" class="h-16 w-auto object-contain rounded">
+          <p class="text-xs text-cream/70 font-light leading-relaxed">
+            A sanctuary of mindful beauty, bespoke aesthetic science, and high-end hair styling in a serene warm off-white haven.
+          </p>
+          <div class="flex items-center gap-4 text-gold-light text-sm pt-2 font-medium">
+            <a href="#" class="hover:text-white transition-colors" aria-label="Gloss Studio Instagram">Instagram</a>
+            <span>•</span>
+            <a href="#" class="hover:text-white transition-colors" aria-label="Gloss Studio Pinterest">Pinterest</a>
+            <span>•</span>
+            <a href="#" class="hover:text-white transition-colors" aria-label="Gloss Studio Facebook">Facebook</a>
+          </div>
+        </div>
+
+        <!-- Hours Column -->
+        <div class="space-y-3">
+          <h4 class="font-serif text-lg font-semibold text-gold-light uppercase tracking-wider">Atelier Hours</h4>
+          <div class="text-xs text-cream/85 space-y-2 font-light">
+            <div class="flex justify-between border-b border-cream/10 pb-1">
+              <span>Monday – Friday:</span>
+              <span class="text-gold-light font-medium">9:00 AM – 8:00 PM</span>
+            </div>
+            <div class="flex justify-between border-b border-cream/10 pb-1">
+              <span>Saturday:</span>
+              <span class="text-gold-light font-medium">9:00 AM – 7:00 PM</span>
+            </div>
+            <div class="flex justify-between border-b border-cream/10 pb-1">
+              <span>Sunday:</span>
+              <span class="text-gold-light font-medium">10:00 AM – 5:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Concierge & Location Column -->
+        <div class="space-y-3">
+          <h4 class="font-serif text-lg font-semibold text-gold-light uppercase tracking-wider">Location & Concierge</h4>
+          <div class="text-xs text-cream/85 space-y-2 font-light">
+            <p>740 Fifth Avenue, Suite 1200<br>New York, NY 10019</p>
+            <p class="pt-1">Concierge: <a href="tel:+18005554567" class="text-gold-light hover:underline font-medium">+1 (800) 555-GLOSS</a></p>
+            <p>Email: <a href="mailto:concierge@glossstudio.com" class="text-gold-light hover:underline font-medium">concierge@glossstudio.com</a></p>
+          </div>
+        </div>
+
+        <!-- Atelier Privé Newsletter -->
+        <div class="space-y-4">
+          <h4 class="font-serif text-lg font-semibold text-gold-light uppercase tracking-wider">Atelier Privé</h4>
+          <p class="text-xs text-cream/70 font-light">Receive private invitations, seasonal beauty edits, and member-only privilege access.</p>
+          
+          <form id="newsletter-form" class="flex flex-col gap-2">
+            <input type="email" required placeholder="Enter your email address" class="w-full px-4 py-3 rounded-xl bg-cream/10 border border-gold-primary/30 text-white text-xs placeholder:text-cream/40 focus:outline-none focus:border-gold-light">
+            <button type="submit" class="w-full py-3 text-xs uppercase tracking-[0.2em] font-semibold btn-gold-solid rounded-xl">
+              Subscribe
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Stylized Location Map Box -->
+      <div class="py-10 flex flex-col md:flex-row items-center justify-between gap-6 border-b border-gold-primary/15">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-gold-primary/20 border border-gold-primary/40 flex items-center justify-center text-gold-light text-xl shadow-inner">
+            📍
+          </div>
+          <div>
+            <div class="text-sm font-serif font-semibold text-white">Gloss Studio Flagship Sanctuary</div>
+            <div class="text-xs text-cream/70 font-light">Valet parking available at 5th Ave entrance.</div>
+          </div>
+        </div>
+        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.2em] btn-gold-outline rounded-full text-gold-light border-gold-light/40 hover:bg-gold-light hover:text-espresso">
+          Get Directions
+        </a>
+      </div>
+
+      <!-- Copyright & Legal -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-cream/50 gap-4">
+        <div>© 2026 Gloss Studio. All Rights Reserved. Crafted for Luxury & Wellness.</div>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-gold-light transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-gold-light transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-gold-light transition-colors">Accessibility</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Application Logic JS -->
+  <script src="js/app.js"></script>
+</body>
+</html>
