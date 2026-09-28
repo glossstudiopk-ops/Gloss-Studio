@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treatment Menu | Gloss Studio</title>
+  <meta name="description" content="Live Gloss Studio aesthetic treatment menu and pricing, synced directly with the Gloss Studio CRM.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: { DEFAULT:'#F9F3EB', card:'#FFFFFF', dark:'#F3EAE0' },
+            gold: { primary:'#A57448', light:'#C49265', dark:'#825833' },
+            espresso: { DEFAULT:'#3D2B1D', dark:'#231911' }
+          },
+          fontFamily: {
+            serif:['Cormorant Garamond','Playfair Display','serif'],
+            sans:['Montserrat','sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body class="bg-cream text-espresso">
+  <header class="sticky top-0 z-40 glass-header">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 py-3 flex items-center justify-between gap-6">
+      <a href="index.html" class="inline-flex items-center">
+        <img src="assets/images/logo.jpg" alt="Gloss Studio" class="h-14 w-auto rounded-md">
+      </a>
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="hidden sm:inline-flex px-5 py-2.5 text-xs uppercase tracking-[0.2em] btn-gold-outline rounded-full">Home</a>
+        <a href="index.html#reserve" class="inline-flex px-5 py-2.5 text-xs uppercase tracking-[0.2em] btn-gold-solid rounded-full">Book Appointment</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="px-6 md:px-12 pt-16 pb-10">
+      <div class="max-w-5xl mx-auto text-center">
+        <span class="text-xs uppercase tracking-[0.3em] text-gold-primary font-semibold">Live from Gloss Studio CRM</span>
+        <h1 class="font-serif text-5xl sm:text-6xl text-espresso mt-3">Treatment <span class="italic gold-gradient-text">Menu</span></h1>
+        <p class="text-sm text-espresso/70 max-w-2xl mx-auto mt-4 leading-relaxed">
+          This menu is synced directly with our CRM. Any service added, edited, or removed by the Gloss Studio team is reflected here automatically.
+        </p>
+      </div>
+    </section>
+
+    <section class="px-6 md:px-12 pb-24">
+      <div class="max-w-6xl mx-auto">
+        <div class="bg-white border border-gold-primary/15 rounded-2xl p-4 sm:p-5 mb-8 flex flex-col md:flex-row md:items-center gap-4 justify-between">
+          <div class="relative flex-1 max-w-xl">
+            <input id="menu-search" type="search" placeholder="Search treatments..." class="w-full px-4 py-3 rounded-xl bg-cream border border-gold-primary/20 focus:outline-none focus:border-gold-primary text-sm">
+          </div>
+          <div id="menu-count" class="text-xs uppercase tracking-widest text-espresso/60 font-semibold">Loading services...</div>
+        </div>
+
+        <div id="menu-loading" class="py-16 text-center text-espresso/60">
+          Loading live treatment menu...
+        </div>
+
+        <div id="menu-error" class="hidden py-10 px-5 rounded-2xl bg-white border border-red-200 text-center text-sm text-red-700"></div>
+
+        <div id="menu-root" class="space-y-12"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-gold-primary/15 bg-cream-dark/50">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 py-8 flex flex-col sm:flex-row gap-3 items-center justify-between text-xs text-espresso/60">
+      <span>Gloss Studio</span>
+      <span>Prices and availability are managed through our live CRM.</span>
+    </div>
+  </footer>
+
+  <script src="js/menu.js"></script>
+</body>
+</html>
