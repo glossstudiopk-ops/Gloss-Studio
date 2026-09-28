@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Treatment Menu | Gloss Studio</title>
   <meta name="description" content="Live Gloss Studio aesthetic treatment menu and pricing, synced directly with the Gloss Studio CRM.">
+  <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
+  <link rel="apple-touch-icon" href="assets/images/logo.jpg">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -26,56 +28,106 @@
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
-<body class="bg-cream text-espresso">
+<body class="bg-cream text-espresso min-w-0">
   <header class="sticky top-0 z-40 glass-header">
-    <div class="max-w-7xl mx-auto px-6 md:px-12 py-3 flex items-center justify-between gap-6">
-      <a href="index.html" class="inline-flex items-center">
-        <img src="assets/images/logo.jpg" alt="Gloss Studio" class="h-14 w-auto rounded-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-3 flex items-center justify-between gap-3">
+      <a href="index.html" class="inline-flex items-center shrink-0">
+        <img src="assets/images/logo.jpg" alt="Gloss Studio" class="h-11 sm:h-14 w-auto rounded-md">
       </a>
-      <div class="flex items-center gap-3">
-        <a href="index.html" class="hidden sm:inline-flex px-5 py-2.5 text-xs uppercase tracking-[0.2em] btn-gold-outline rounded-full">Home</a>
-        <a href="index.html#reserve" class="inline-flex px-5 py-2.5 text-xs uppercase tracking-[0.2em] btn-gold-solid rounded-full">Book Appointment</a>
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="index.html" class="hidden sm:inline-flex px-4 sm:px-5 py-2.5 text-[10px] sm:text-xs uppercase tracking-[0.16em] sm:tracking-[0.2em] btn-gold-outline rounded-full">Home</a>
+        <button id="top-book-btn" class="inline-flex px-4 sm:px-5 py-2.5 text-[10px] sm:text-xs uppercase tracking-[0.16em] sm:tracking-[0.2em] btn-gold-solid rounded-full">Book Appointment</button>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="px-6 md:px-12 pt-16 pb-10">
+    <section class="px-4 sm:px-6 md:px-12 pt-10 sm:pt-16 pb-8 sm:pb-10">
       <div class="max-w-5xl mx-auto text-center">
-        <span class="text-xs uppercase tracking-[0.3em] text-gold-primary font-semibold">Live from Gloss Studio CRM</span>
-        <h1 class="font-serif text-5xl sm:text-6xl text-espresso mt-3">Treatment <span class="italic gold-gradient-text">Menu</span></h1>
-        <p class="text-sm text-espresso/70 max-w-2xl mx-auto mt-4 leading-relaxed">
-          This menu is synced directly with our CRM. Any service added, edited, or removed by the Gloss Studio team is reflected here automatically.
+        <span class="text-[10px] sm:text-xs uppercase tracking-[0.25em] sm:tracking-[0.3em] text-gold-primary font-semibold">Live from Gloss Studio CRM</span>
+        <h1 class="font-serif text-4xl sm:text-6xl text-espresso mt-3">Treatment <span class="italic gold-gradient-text">Menu</span></h1>
+        <p class="text-xs sm:text-sm text-espresso/70 max-w-2xl mx-auto mt-4 leading-relaxed">
+          Current services and pricing are synced directly with our CRM.
         </p>
       </div>
     </section>
 
-    <section class="px-6 md:px-12 pb-24">
+    <section class="px-4 sm:px-6 md:px-12 pb-20 sm:pb-24">
       <div class="max-w-6xl mx-auto">
-        <div class="bg-white border border-gold-primary/15 rounded-2xl p-4 sm:p-5 mb-8 flex flex-col md:flex-row md:items-center gap-4 justify-between">
-          <div class="relative flex-1 max-w-xl">
+        <div class="bg-white border border-gold-primary/15 rounded-2xl p-4 sm:p-5 mb-7 sm:mb-8 flex flex-col md:flex-row md:items-center gap-4 justify-between">
+          <div class="relative flex-1 max-w-xl w-full">
             <input id="menu-search" type="search" placeholder="Search treatments..." class="w-full px-4 py-3 rounded-xl bg-cream border border-gold-primary/20 focus:outline-none focus:border-gold-primary text-sm">
           </div>
-          <div id="menu-count" class="text-xs uppercase tracking-widest text-espresso/60 font-semibold">Loading services...</div>
+          <div id="menu-count" class="text-[10px] sm:text-xs uppercase tracking-widest text-espresso/60 font-semibold">Loading services...</div>
         </div>
 
-        <div id="menu-loading" class="py-16 text-center text-espresso/60">
-          Loading live treatment menu...
-        </div>
-
+        <div id="menu-loading" class="py-16 text-center text-espresso/60">Loading live treatment menu...</div>
         <div id="menu-error" class="hidden py-10 px-5 rounded-2xl bg-white border border-red-200 text-center text-sm text-red-700"></div>
-
-        <div id="menu-root" class="space-y-12"></div>
+        <div id="menu-root" class="space-y-10 sm:space-y-12"></div>
       </div>
     </section>
   </main>
 
   <footer class="border-t border-gold-primary/15 bg-cream-dark/50">
-    <div class="max-w-7xl mx-auto px-6 md:px-12 py-8 flex flex-col sm:flex-row gap-3 items-center justify-between text-xs text-espresso/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-8 flex flex-col sm:flex-row gap-3 items-center justify-between text-[10px] sm:text-xs text-espresso/60 text-center sm:text-left">
       <span>Gloss Studio</span>
       <span>Prices and availability are managed through our live CRM.</span>
     </div>
   </footer>
+
+  <div id="booking-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/45 p-3 sm:p-4">
+    <div class="bg-white w-full max-w-xl max-h-[94vh] overflow-y-auto rounded-2xl shadow-2xl border border-gold-primary/20 p-4 sm:p-6">
+      <div class="flex items-start justify-between gap-3 border-b border-gold-primary/15 pb-3 mb-4">
+        <div>
+          <h2 class="font-serif text-2xl font-semibold">Book Treatment</h2>
+          <p class="text-[11px] text-espresso/60 mt-1">Complete the same booking details used by our reception team.</p>
+        </div>
+        <button id="booking-close" class="text-xl leading-none px-2 py-1" aria-label="Close booking">✕</button>
+      </div>
+
+      <form id="public-booking-form" class="space-y-4 text-xs">
+        <div class="p-4 bg-cream rounded-2xl border border-gold-primary/15 space-y-3">
+          <div class="font-semibold text-sm">Customer Information</div>
+          <div><label class="font-semibold">Customer Name *</label><input id="public-name" required class="w-full mt-1 p-2.5 bg-white border border-gold-primary/20 rounded-xl"></div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div><label class="font-semibold">Phone</label><input id="public-phone" class="w-full mt-1 p-2.5 bg-white border border-gold-primary/20 rounded-xl" placeholder="03xx xxxxxxx"></div>
+            <div><label class="font-semibold">Email</label><input id="public-email" type="email" class="w-full mt-1 p-2.5 bg-white border border-gold-primary/20 rounded-xl" placeholder="Optional"></div>
+          </div>
+        </div>
+
+        <div><label class="font-semibold">Treatment *</label><select id="public-service" required class="w-full mt-1 p-2.5 bg-cream border border-gold-primary/20 rounded-xl"></select></div>
+
+        <div id="public-option-wrap" class="hidden"><label class="font-semibold">Treatment Option *</label><select id="public-option" class="w-full mt-1 p-2.5 bg-cream border border-gold-primary/20 rounded-xl"></select></div>
+
+        <div id="public-units-wrap" class="hidden"><label class="font-semibold">Botox Units *</label><select id="public-units" class="w-full mt-1 p-2.5 bg-cream border border-gold-primary/20 rounded-xl"></select><p id="public-units-note" class="text-[10px] text-espresso/60 mt-1"></p></div>
+
+        <div id="public-quantity-wrap" class="hidden"><label id="public-quantity-label" class="font-semibold">Quantity *</label><input id="public-quantity" type="number" min="1" value="1" class="w-full mt-1 p-2.5 bg-cream border border-gold-primary/20 rounded-xl"></div>
+
+        <div id="public-range-wrap" class="hidden"><label class="font-semibold">Actual Price (Rs.) *</label><input id="public-range-price" type="number" min="0" class="w-full mt-1 p-2.5 bg-cream border border-gold-primary/20 rounded-xl"><p id="public-range-note" class="text-[10px] text-espresso/60 mt-1"></p></div>
+
+        <div><label class="font-semibold">Assigned Staff *</label><select id="public-staff" required class="w-full mt-1 p-2.5 bg-cream border border-gold-primary/20 rounded-xl"><option value="">Loading staff...</option></select></div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div><label class="font-semibold">Date *</label><input id="public-date" required type="date" class="w-full mt-1 p-2.5 bg-cream border border-gold-primary/20 rounded-xl"></div>
+          <div><label class="font-semibold">Time *</label><input id="public-time" required type="time" value="10:00" class="w-full mt-1 p-2.5 bg-cream border border-gold-primary/20 rounded-xl"></div>
+        </div>
+
+        <div class="p-4 rounded-xl border border-gold-primary/15 bg-cream flex items-center justify-between gap-4">
+          <div><div class="text-[10px] uppercase tracking-wider text-espresso/60 font-semibold">Actual Amount</div><div id="public-price-detail" class="text-[11px] text-espresso/60 mt-1"></div></div>
+          <div id="public-final-price" class="font-serif text-2xl font-bold whitespace-nowrap">Rs. 0</div>
+        </div>
+
+        <div><label class="font-semibold">Notes</label><textarea id="public-notes" rows="2" class="w-full mt-1 p-2.5 bg-cream border border-gold-primary/20 rounded-xl"></textarea></div>
+
+        <div id="public-booking-message" class="hidden p-3 rounded-xl border text-xs"></div>
+
+        <div class="flex flex-col-reverse sm:flex-row justify-end gap-2">
+          <button type="button" id="public-cancel" class="px-4 py-2.5 rounded-xl bg-cream border border-gold-primary/20 font-semibold">Cancel</button>
+          <button id="public-submit" class="px-4 py-2.5 rounded-xl btn-gold-solid font-semibold">Save Booking</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <script src="js/menu.js"></script>
 </body>
